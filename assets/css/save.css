@@ -1,0 +1,256 @@
+@font-face {
+  font-family: "Cynzel";
+  src: url("../fonts/Cinzel-Regular.otf");
+  src: url("../fonts/Cinzel-Regular.otf") format("opentype");
+  font-style: normal;
+}
+
+/* Box Model Hack */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+:root {
+  --color-dark: #000;
+  --color-background-body: #fff;
+  --color-background-wrapper: #fff;
+  --color-white: #fff;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  background-color: var(--color-background-body);
+  font-family: "Cynzel";
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+/* navigation */
+.wrapper {
+  background-color: var(--color-background-wrapper);
+  min-width: 320px;
+}
+
+a,
+a:visited,
+a:link {
+  text-decoration: none;
+}
+
+nav {
+  width: 70%;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 1em;
+}
+
+header a {
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.submenu {
+  display: none;
+}
+
+header,
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  height: 50px;
+}
+
+footer {
+}
+
+.imag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  padding: 1em;
+  font-weight: bold;
+  font-family: "Cynzel";
+  text-align: center;
+  width: 175px;
+  text-transform: uppercase;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+header > div {
+  width: 15%;
+  text-align: center;
+  min-width: 100px;
+}
+
+nav li {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav span {
+  border-bottom: 2px solid var(--color-dark);
+  width: 30px;
+  height: 5px;
+  display: block;
+}
+
+#menuToggle,
+#menuToggle ~ label {
+  display: none;
+  margin: 0 auto;
+}
+
+/**************************************/
+/* Banner                             */
+/**************************************/
+
+.banner {
+  position: relative;
+  min-width: 350px;
+}
+
+.banner article {
+  position: absolute;
+  bottom: 0;
+  left: 6%;
+  height: 94%;
+  width: 50%;
+  color: var(--color-white);
+}
+
+.banner h1 {
+  font-family: Cynzel;
+  font-size: 10vmin;
+  font-weight: inherit;
+}
+
+.banner.imag {
+  min-height: 225px;
+}
+.banner span {
+  display: block;
+}
+.banner p {
+  font-family: Cinzel;
+  font-size: 1.6vmax;
+  text-transform: uppercase;
+}
+
+.banner a {
+  margin: 1em;
+  display: block;
+}
+
+.banner div {
+  background-color: var(--color-dark);
+  padding: 1em;
+  width: 280px;
+}
+
+.banner div span {
+  padding: 1em;
+}
+
+.competence {
+  background-color: yellow;
+  height: 30px;
+}
+
+@media all and (max-width: 1200px) {
+  .banner h1 {
+    font-size: 8vmin;
+    font-weight: inherit;
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .banner div {
+    visibility: hidden;
+  }
+}
+
+@media all and (max-width: 950px) {
+  .banner h1 {
+    font-size: 6vmin;
+    font-weight: inherit;
+  }
+}
+@media all and (max-width: 700px) {
+  nav > ul {
+    display: none;
+  }
+  #menuToggle ~ label {
+    display: block;
+  }
+
+  #menuToggle:checked ~ ul {
+    display: block;
+    display: block;
+    top: 33px;
+    position: absolute;
+    background: #000;
+    color: white;
+    left: 0;
+  }
+  #menuToggle:not(:checked) ~ ul {
+    display: none;
+  }
+
+  nav a {
+    color: var(--color-white);
+  }
+}
+
+@media all and (max-width: 321px) {
+  .banner h1 {
+    font-size: 20px;
+  }
+}
+
+/* common: do not rewrite them */
+
+.btn--white {
+  background: var(--color-white);
+  color: var(--color-dark);
+}
+
+.btn--dark {
+  background: var(--color-dark);
+  color: var(--color-white);
+}
