@@ -1,6 +1,6 @@
-# -100devs-hair-saloon
+# hair-saloon
 
-Hair salon made as an assigment for #100devs bootcamp. Original design by Ajmal Khan
+Hair salon. Original design by Ajmal Khan
 
 Live ? Clic on the image
 
